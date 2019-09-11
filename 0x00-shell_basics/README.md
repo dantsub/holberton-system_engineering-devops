@@ -34,4 +34,8 @@ This command is for move betty in holberton.
 
 ## rm /tmp/holberton/betty
 
-This commad is for remove file betty from /tmp/holberton/.
+This command is for remove file betty from /tmp/holberton/.
+
+## rm -r /tmp/holberton
+
+This command is for remove directory holberton from /tmp/.

@@ -10,4 +10,8 @@ This command is for display the contents list of the current directory.
 
 ## cd /home/user
 
-This is a command that changes the working directory to the user's home directory.
+This is the command that changes the working directory to the user's home directory.
+
+## ls -l
+
+This command display current directory contents in a long format.

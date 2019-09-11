@@ -15,3 +15,7 @@ This is the command that changes the working directory to the user's home direct
 ## ls -l
 
 This command display current directory contents in a long format.
+
+## ls -s -l
+
+This command display current directory contents, including hidden files and a long format.

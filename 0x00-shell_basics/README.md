@@ -39,3 +39,7 @@ This command is for remove file betty from /tmp/holberton/.
 ## rm -r /tmp/holberton
 
 This command is for remove directory holberton from /tmp/.
+
+## cd ..
+
+This command that change the working directory to the previous one.

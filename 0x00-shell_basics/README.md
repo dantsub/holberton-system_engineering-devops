@@ -31,3 +31,7 @@ This commad is for creates a directory in /tmp/ directory.
 ## mv /tmp/betty /tmp/holberton/betty
 
 This command is for move betty in holberton.
+
+## rm /tmp/holberton/betty
+
+This commad is for remove file betty from /tmp/holberton/.

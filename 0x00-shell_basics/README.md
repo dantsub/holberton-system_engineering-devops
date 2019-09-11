@@ -8,7 +8,7 @@ This commad is for print absolute path name of the current working directory.
 
 This command is for display the contents list of the current directory.
 
-## cd /home/user
+## cd /home/vagrant
 
 This is the command that changes the working directory to the user's home directory.
 

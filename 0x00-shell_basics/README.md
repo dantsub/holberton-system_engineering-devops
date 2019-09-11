@@ -8,7 +8,7 @@ This commad is for print absolute path name of the current working directory.
 
 This command is for display the contents list of the current directory.
 
-## cd /home/vagrant
+## cd ~
 
 This is the command that changes the working directory to the user's home directory.
 
@@ -23,3 +23,7 @@ This command display current directory contents, including hidden files and a lo
 ## ls -la -n
 
 This command display current directory contens.
+
+## mkdir /tmp/holberton
+
+This commad is for creates a directory in /tmp/ directory.

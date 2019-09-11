@@ -27,3 +27,7 @@ This command display current directory contens.
 ## mkdir /tmp/holberton
 
 This commad is for creates a directory in /tmp/ directory.
+
+## mv /tmp/betty /tmp/holberton/betty
+
+This command is for move betty in holberton.

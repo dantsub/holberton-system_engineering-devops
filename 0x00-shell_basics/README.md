@@ -51,3 +51,11 @@ This command that lists all files (even ones with names beginning with a period 
 ## file /tmp/iamafile
 
 This is for prints the type of the file named iamafile from /tmp/.
+
+## ln -s /bin/ls __ls__
+
+This command is for Create a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory.
+
+## cp -n *.html . ..
+
+This command Create a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.

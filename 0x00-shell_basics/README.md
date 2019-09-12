@@ -56,7 +56,7 @@ This is for prints the type of the file named iamafile from /tmp/.
 
 This command is for Create a symbolic link to /bin/ls, named __ls__. The symbolic link should be created in the current working directory.
 
-## cp -n *.html . ..
+## cp -n *.html ..
 
 This command Create a script that copies all the HTML files from the current working directory to the parent of the working directory, but only copy files that did not exist in the parent of the working directory or were newer than the versions in the parent of the working directory.
 
@@ -72,4 +72,13 @@ This is for Create a script that deletes all files in the current working direct
 
 This Create a script that creates the directories welcome/, welcome/to/ and welcome/to/holberton in the current directory.
 
-## 
+## ls -map
+
+This is a command that lists all the files and directories of the current directory, separated by commas (,).
+
+ - Directory names should end with a slash (/)
+ - Files and directories starting with a dot (.) should be listed
+ - The listing should be alpha ordered, except for the directories . and .. which should be listed at the very beginning
+ - Only digits and letters are used to sort; Digits should come first
+ - You can assume that all the files we will test with will have at least one letter or one digit
+ - The listing should end with a new line

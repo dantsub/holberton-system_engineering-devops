@@ -50,4 +50,12 @@ head /etc/passwd
 
 This script display the last 10 lines of /etc/passwd
 
+## 6-third_line
+
+~~~
+head -n 3 iacta
+~~~
+
+This script displays the third line of the file iacta.
+
 

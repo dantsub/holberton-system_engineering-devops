@@ -26,4 +26,12 @@ cat /etc/passwd
 
 This script display the content of the /etc/passwd file.
 
+## 3-twofiles
+
+~~~
+cat /etc/passwd /etc/hosts
+~~~
+
+This script display the content of /etc/passwd and /etc/hosts.
+
 

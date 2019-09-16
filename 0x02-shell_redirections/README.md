@@ -67,6 +67,7 @@ This script displays the third line of the file iacta.
 
 ~~~
 #!/bin/bash
+echo "Holberton School" > "\\*\\\'\"Holberton School\"\'\\\*$\?\*\*\*\*\*:)"
 ~~~
 
 This script creates a file named exactly \*\\'"Holberton School"\'\\*$\?\*\*\*\*\*:) containing the text Holberton School ending by a new line.

@@ -2,9 +2,9 @@
 
 ## 0-hello_world
 
-This script print "Hello, World".
-
 ~~~
 #!/bin/bash
 echo "Hello, World"
 ~~~
+
+This script print "Hello, World".

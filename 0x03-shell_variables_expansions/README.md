@@ -9,4 +9,13 @@ alias ls="rm *"
 
 This script creates an alias.
 
+## 1-hello_you
+
+~~~
+#!/bin/bash
+echo "hello $(whoami)"
+~~~
+
+This script prints *hello user*, where user is the current Linux user.
+
 

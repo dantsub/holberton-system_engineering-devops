@@ -84,6 +84,7 @@ This script  writes into the file ls_cwd_content the result of the command ls -l
 
 ~~~
 #!/bin/bash
+tail -n 1 iacta >> iacta
 ~~~
 
 This script duplicates the last line of the file iacta.

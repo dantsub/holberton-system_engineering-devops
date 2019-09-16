@@ -112,6 +112,7 @@ This script counts the number of directories and sub-directories in the current 
 
 ~~~
 #!/bin/bash
+ls -lt | head
 ~~~
 
 This script displays the 10 newest files in the current directory.

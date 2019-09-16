@@ -121,6 +121,7 @@ This script displays the 10 newest files in the current directory.
 
 ~~~
 #!/bin/bash
+sort | uniq -u
 ~~~
 
 This takes a list of words as input and prints only words that appear exactly once.

@@ -58,7 +58,7 @@ This script display the last 10 lines of /etc/passwd
 
 ~~~
 #!/bin/bash
-head -n 3 iacta
+head -n 3 iacta | tail -n 1
 ~~~
 
 This script displays the third line of the file iacta.
@@ -94,6 +94,7 @@ This script duplicates the last line of the file iacta.
 
 ~~~
 #!/bin/bash
+find ./ -type f -name '*.js' -delete
 ~~~
 
 This script deletes all the regular files (not the directories) with a .js extension that are present in the current directory and all its subfolders.
@@ -102,6 +103,7 @@ This script deletes all the regular files (not the directories) with a .js exten
 
 ~~~
 #!/bin/bash
+find . -mindepth 1 -type d | wc -l
 ~~~
 
 This script counts the number of directories and sub-directories in the current directory.
@@ -135,6 +137,7 @@ This takes a list of words as input and prints only words that appear exactly on
 
 ~~~
 #!/bin/bash
+grep root /etc/passwd
 ~~~
 
 This script display lines containing the pattern root from the file /etc/passwd
@@ -143,6 +146,7 @@ This script display lines containing the pattern root from the file /etc/passwd
 
 ~~~
 #!/bin/bash
+grep -c bin /etc/passwd
 ~~~
 
 This script display the number of lines that contain the pattern bin in the file /etc/passwd
@@ -151,6 +155,7 @@ This script display the number of lines that contain the pattern bin in the file
 
 ~~~
 #!/bin/bash
+grep -A 3 root /etc/passwd
 ~~~
 
 This script display lines containing the pattern root and 3 lines after them in the file.
@@ -159,6 +164,7 @@ This script display lines containing the pattern root and 3 lines after them in 
 
 ~~~
 #!/bin/bash
+grep -v bin /etc/passwd
 ~~~
 
 This script display all the lines in the file /etc/passwd that do not contain the pattern bin.
@@ -167,6 +173,7 @@ This script display all the lines in the file /etc/passwd that do not contain th
 
 ~~~
 #!/bin/bash
+cat /etc/ssh/sshd_config | grep ^[a-Z]
 ~~~
 
 This script display all lines of the file /etc/ssh/sshd_config starting with a letter.
@@ -177,6 +184,7 @@ This script display all lines of the file /etc/ssh/sshd_config starting with a l
 
 ~~~
 #!/bin/bash
+tr Ac Ze
 ~~~
 
 This script replace all characters A and c from input to Z and e respectively.
@@ -185,6 +193,7 @@ This script replace all characters A and c from input to Z and e respectively.
 
 ~~~
 #!/bin/bash
+tr -d cC
 ~~~
 
 This script removes all letters c and C from input.
@@ -193,6 +202,7 @@ This script removes all letters c and C from input.
 
 ~~~
 #!/bin/bash
+rev
 ~~~
 
 This script reverse its input.
@@ -201,6 +211,7 @@ This script reverse its input.
 
 ~~~
 #!/bin/bash
+cut -d':' -f 1,6 /etc/passwd | sort
 ~~~
 
 This script displays all users and their home directories, sorted by users.

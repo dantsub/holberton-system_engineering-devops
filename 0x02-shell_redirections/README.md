@@ -32,6 +32,14 @@ This script display the content of the /etc/passwd file.
 cat /etc/passwd /etc/hosts
 ~~~
 
-This script display the content of /etc/passwd and /etc/hosts.
+This script display the content of /etc/passwd and /etc/hosts
+
+## 4-lastlines
+
+~~~
+tail /etc/passwd
+~~~
+
+This script display the last 10 lines of /etc/passwd
 
 

@@ -13,7 +13,7 @@ This script creates an alias.
 
 ~~~
 #!/bin/bash
-echo "hello $(whoami)"
+echo "hello $USER"
 ~~~
 
 This script prints *hello user*, where user is the current Linux user.

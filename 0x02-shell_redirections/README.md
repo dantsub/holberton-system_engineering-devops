@@ -42,4 +42,12 @@ tail /etc/passwd
 
 This script display the last 10 lines of /etc/passwd
 
+## 5-firstlines
+
+~~~
+head /etc/passwd
+~~~
+
+This script display the last 10 lines of /etc/passwd
+
 

@@ -18,4 +18,9 @@ echo "hello $USER"
 
 This script prints *hello user*, where user is the current Linux user.
 
+## 2-path
 
+~~~
+#!/bin/bash
+PÁTH=$PATH:/action
+~~~

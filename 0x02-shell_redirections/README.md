@@ -17,3 +17,13 @@ echo \""(Ôo)'"
 ~~~
 
 This script display a confused smiley "(Ôo)'
+
+## 2-hellofile
+
+~~~
+cat /etc/passwd
+~~~
+
+This script display the content of the /etc/passwd file.
+
+

@@ -4,8 +4,6 @@
 
 This script print "Hello, World".
 
-`
-#!/bin/bash
-
+`#!/bin/bash
 echo "Hello, World" 
 `

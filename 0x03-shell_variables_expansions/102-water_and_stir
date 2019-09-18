@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $WATER | first="tr water 01234" | seg="$((5#$first))" | echo $STIR | ter="tr stir. 01234" | cuar="$((5#$ter))" | quin="$(($seg+$cuar))" | printf "%o" $quin | tr 01234567 belhnort
+printf "%o\n" $(( $(( 5#$(echo $WATER | tr water 01234) )) + $(( 5#$(echo $STIR | tr stir. 01234 ))) )) | tr 01234567 behlnort

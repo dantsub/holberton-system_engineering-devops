@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# Displays
+# - The content of the current directory
+# - In a list format
+# - Where only the part of the name after the first dash is displayed
+ls="$(ls)"
+for list in $ls
+do
+    file=$(echo "$list" | cut -d"-" -f 2)
+    echo "$file"
+done
+
+

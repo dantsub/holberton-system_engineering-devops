@@ -6,14 +6,14 @@
 i=0
 while ((i<10));
 do
-    echo "Holberton School"
-    if ((i == 3))
-    then
-        echo "bad luck"
-    fi
-    if ((i == 7))
-    then
-        echo "good luck"
-    fi
-    ((i++))
+	echo "Holberton School"
+	if ((i == 3))
+	then
+		echo "bad luck"
+	fi
+	if ((i == 7))
+	then
+		echo "good luck"
+	fi
+	((i++))
 done

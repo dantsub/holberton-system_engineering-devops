@@ -2,6 +2,7 @@
 # To infinity and beyond indefinitely
 # With a sleep 2 in between each iteration
 # I am invincible!!! when receiving a SIGTERM signal
+echo $$ > /var/run/holbertonscript.pid
 trap "echo 'I hate the kill command'; exit" 15
 trap "echo 'Y U no love me?!'" 2
 trap "rm /var/run/holbertonscript.pid; exit" 3

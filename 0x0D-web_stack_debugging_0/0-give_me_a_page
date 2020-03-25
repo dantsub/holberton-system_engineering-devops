@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Engineer solution :P
+sudo service apache2 restart

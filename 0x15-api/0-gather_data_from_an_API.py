@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""
+""" Module gather data from an API
 """
 import requests
 from sys import argv as av

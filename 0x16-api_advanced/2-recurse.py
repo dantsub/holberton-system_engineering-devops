@@ -18,10 +18,14 @@ def recurse(subreddit, hot_list=[], after=""):
     response = get(api, headers=headers).json()
     # =========================================================
     try:
+        # ======== add hot posts to hot_list ========
         for top in response.get('data')['children']:
             hot_list.append(top['data']['title'])
+        # ===========================================
+        # ============ It calls itself if after exists =============
         if response['data']['after'] is not None:
             recurse(subreddit, hot_list, response['data']['after'])
-        return hot_list
+        # ==========================================================
+        return hot_list  # return list
     except Exception:
         return None

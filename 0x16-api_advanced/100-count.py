@@ -19,9 +19,6 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
     response = get(url, headers=headers).json()
 
     try:
-        if response.status_code == 404:
-            raise Exception
-
         _after = response['data']['after']
         for item in response['data']['children']:
             for word in counter:
@@ -30,14 +27,10 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
         if response['data']['after']:
             count_words(subreddit, word_list, _after, counter, 1)
         else:
-            if not len(counter):
-                print()
-                return
-
             letters = sorted(counter.items(), key=lambda kv: kv[1], reverse=True)
             for name, num in letters:
                 if num != 0:
                     print('{}: {}'.format(name, num))
 
     except Exception:
-        print()
+        return

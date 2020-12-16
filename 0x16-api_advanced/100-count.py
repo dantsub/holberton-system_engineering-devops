@@ -32,6 +32,6 @@ def count_words(subreddit, word_list, after="", count={}, ini=0, dup={}):
             for name, num in topics:
                 num *= dup[name]
                 if num != 0:
-                    print('{}: {}'.format(name, num))
+                    print('{}: {}'.format(name.lower(), num))
     except Exception:
         return None

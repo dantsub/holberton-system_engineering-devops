@@ -4,15 +4,15 @@
 from requests import request
 
 
-def count_words(subreddit, word_list, after="", counter={}, ini=0):
+def count_words(subreddit, word_list, after="", count={}, ini=0, dup={}):
     """A recursive function that queries the Reddit API, parses the title
     of all hot articles, and prints a sorted count of given keywords
     (case-insensitive, delimited by spaces. Javascript should count as
     javascript, but java should not)
     """
     if ini == 0:
-        for word in word_list:
-            counter[word] = 0
+        count = {k: 0 for k in word_list}
+        dup = {k: count[k] + 1 if not count else 1 for k in word_list}
 
     url = "https://api.reddit.com/r/{}/hot?after={}".format(subreddit, after)
     headers = {"User-Agent": "Python3"}
@@ -21,14 +21,16 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
         top = response['data']['children']
         _after = response['data']['after']
         for item in top:
-            for word in counter:
-                counter[word] += item['data']['title'].lower(
+            for word in count:
+                count[word] += item['data']['title'].lower(
                     ).split(' ').count(word.lower())
         if _after is not None:
-            count_words(subreddit, word_list, _after, counter, 1)
+            count_words(subreddit, word_list, _after, count, 1, dup)
         else:
-            str = sorted(counter.items(), key=lambda kv: kv[1], reverse=True)
-            for name, num in str:
+            sorty = {k: count[k] for k in sorted(count)}
+            topics = sorted(sorty.items(), key=lambda kv: kv[1], reverse=True)
+            for name, num in topics:
+                num *= dup[name]
                 if num != 0:
                     print('{}: {}'.format(name, num))
     except Exception:

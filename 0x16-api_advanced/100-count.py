@@ -13,8 +13,8 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
     if ini == 0:
         for word in word_list:
             counter[word] = 0
-    url = "https://www.reddit.com/r/{}".format(subreddit)
-    url += "/hot.json?limit=100&after={}".format(after)
+
+    url = "https://api.reddit.com/r/{}/hot?after={}".format(subreddit, after)
     headers = {"User-Agent": "Python3"}
     response = request("GET", url, headers=headers).json()
     try:
@@ -32,4 +32,4 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
                 if num != 0:
                     print('{}: {}'.format(name, num))
     except Exception:
-        return
+        return None

@@ -31,8 +31,8 @@ def count_words(subreddit, word_list, after="", count={}, ini=0, dup={}):
         if _after is not None:
             count_words(subreddit, word_list, _after, count, 1, dup)
         else:
-            sorty = {k: count[k] for k in sorted(count)}
-            topics = sorted(sorty.items(), key=lambda kv: kv[1], reverse=True)
+            sorty = sorted(count.items(), key=lambda r: r[::-1])
+            topics = sorted(sorty, key=lambda kv: kv[1], reverse=True)
             for name, num in topics:
                 num *= dup[name]
                 if num != 0:

@@ -8,11 +8,13 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
     """A recursive function that queries the Reddit API, parses the title
     of all hot articles, and prints a sorted count of given keywords
     (case-insensitive, delimited by spaces. Javascript should count as
-    javascript, but java should not)"""
+    javascript, but java should not)
+    """
     if ini == 0:
         for word in word_list:
             counter[word] = 0
-    url = "https://api.reddit.com/r/{}/hot?after={}".format(subreddit, after)
+    url = "https://www.reddit.com/r/{}".format(subreddit)
+    url += "/hot.json?limit=100&after={}".format(after)
     headers = {"User-Agent": "Python3"}
     response = request("GET", url, headers=headers).json()
     try:

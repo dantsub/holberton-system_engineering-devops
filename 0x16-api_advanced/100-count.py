@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """A file to make a query to an endpoint
 """
@@ -31,4 +30,4 @@ def count_words(subreddit, word_list, after="", counter={}, ini=0):
                 if num != 0:
                     print('{}: {}'.format(name, num))
     except Exception:
-        return
+        return None

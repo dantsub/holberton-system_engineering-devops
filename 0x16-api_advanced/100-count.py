@@ -12,7 +12,11 @@ def count_words(subreddit, word_list, after="", count={}, ini=0, dup={}):
     """
     if ini == 0:
         count = {k: 0 for k in word_list}
-        dup = {k: count[k] + 1 if not count else 1 for k in word_list}
+        dup = {}
+        for word in word_list:
+            if word not in dup:
+                dup[word] = 0
+            dup[word] += 1
 
     url = "https://api.reddit.com/r/{}/hot?after={}".format(subreddit, after)
     headers = {"User-Agent": "Python3"}
